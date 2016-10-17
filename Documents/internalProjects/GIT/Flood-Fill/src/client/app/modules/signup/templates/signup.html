@@ -1,0 +1,71 @@
+<div ncy-breadcrumb></div>
+<div class="signup-container">
+    <div class="row">
+        <div class="col-lg-3 col-md-2"></div>
+        <div class="col-lg-6 col-md-8 col-sm-12 ">
+            <form class="form-horizontal" name="signupForm" novalidate>
+                <div class="form-group">
+                    <label for="nameField" class="col-lg-4 col-md-3 col-sm-3">
+                        User Name<span class="red"> *</span>
+                    </label>
+                    <div class="col-lg-8 col-md-9 col-sm-9 sign-up-input-box">
+                        <input type="text" class="form-control" name="userName" ng-model="signupData.userName" required pattern="^[a-z0-9_-]{3,15}$" />
+                        <span ng-if="alertUserName" class="{{alertClr}}">{{alertUserName}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nameField" class="col-lg-4 col-md-3 col-sm-3">
+                        Skills<span class="red"> *</span>
+                    </label>
+                    <div class="col-lg-8 col-md-9 col-sm-9 sign-up-input-box">
+                        <textArea name="skills" ng-model="signupData.skills" ng-required="true"></textArea>
+                        <span ng-if="alertSkills" class="{{alertClr}}">{{alertSkills}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nameField" class="col-lg-4 col-md-3 col-sm-3">
+                        Phone Number<span class="red"> *</span>
+                    </label>
+                    <div class="col-lg-8 col-md-9 col-sm-9 sign-up-input-box">
+                        <input type="text" class="form-control" name="phone" ng-model="signupData.phone" ng-required="true" pattern="^\d{10}$" />
+                        <span ng-if="alertPhone" class="{{alertClr}}">{{alertPhone}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nameField" class="col-lg-4 col-md-3 col-sm-3">
+                        Email ID<span class="red"> *</span>
+                    </label>
+                    <div class="col-lg-8 col-md-9 col-sm-9 sign-up-input-box">
+                        <input type="email" class="form-control" name="email" ng-model="signupData.email" ng-required="true" />
+                        <span ng-if="alertEmail" class="{{alertClr}}">{{alertEmail}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nameField" class="col-lg-4 col-md-3 col-sm-3">
+                        Password<span class="red"> *</span>
+                    </label>
+                    <div class="col-lg-8 col-md-9 col-sm-9 sign-up-input-box">
+                        <input type="password" class="form-control" name="password" ng-model="signupData.password" ng-required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="signupForm.password.pattern = this.value;" />
+                        <span ng-if="alertPassword" class="{{alertClr}}">{{alertPassword}}</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nameField" class="col-lg-4 col-md-3 col-sm-3">
+                        Confirm Password<span class="red"> *</span>
+                    </label>
+                    <div class="col-lg-8 col-md-9 col-sm-9 sign-up-input-box">
+                        <input type="password" class="form-control" name="cnfPassword" ng-model="signupData.cnfPassword" ng-required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" />
+                        <span ng-if="alertCnfPassword" class="{{alertClr}}">{{alertCnfPassword}}</span>
+                    </div>
+                </div>
+                <div class="alert-res {{alertClr}}">{{alertRes}}</div>
+                <div class="btn-submit-bar col-lg-9 col-md-9 col-sm-9 col-xs-12 text-center">
+                    <button type="submit" class="btn btn-info btn-sm" ng-click="addUser(signupForm)">
+                        SAVE
+                    </button>
+                    <a ui-sref="login">GO BACK</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

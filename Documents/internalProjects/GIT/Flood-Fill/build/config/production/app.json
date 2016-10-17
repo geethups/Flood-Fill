@@ -1,0 +1,24 @@
+{
+    "server": {
+        "port": 8080
+    },
+    "API": {
+        "url": "http://localhost:9090",
+        "headers": {
+            "contentType": "application/json"
+        }
+    },
+    "logDir": "log/local",
+    "database": {
+        "host": "127.9.221.2",
+        "port": "3306",
+        "user": "adminCbzgFxH",
+        "password": "UjndgniZTBxQ",
+        "database": "floodfill"
+    },
+    "mail": {
+        "mailId": "geethusubrahmanian@gmail.com",
+        "authMail": "floodfill123@gmail.com",
+        "authPass": "floodgeethu@123"
+    }
+}

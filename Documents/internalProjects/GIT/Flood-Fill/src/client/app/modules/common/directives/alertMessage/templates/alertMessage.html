@@ -1,0 +1,4 @@
+<div class="row">
+    <uib-alert type="{{alert.type}}" class="animate-show" ng-if="alert.msg" class="fade-in" close="close()"><span class="glyphicon" ng-class="{'glyphicon-exclamation-sign' : alert.type === 'danger', 
+'glyphicon-ok' : alert.type === 'success'}" aria-hidden="true"></span> {{alert.msg}}</uib-alert>
+</div>

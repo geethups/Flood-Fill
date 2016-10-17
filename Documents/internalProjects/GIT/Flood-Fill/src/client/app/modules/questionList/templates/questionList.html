@@ -1,0 +1,27 @@
+<div class="question-list-container">
+    <div id="custom-search-input" class="margin-bottom-ten">
+        <div class="input-group col-md-12">
+            <input type="text" class="search-query form-control" placeholder="Search" ng-model="searchQuery" />
+            <span class="input-group-btn">
+             <button class="btn btn-info" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+            </span>
+        </div>
+    </div>
+    <div class="alert-container">
+        <alert-message alert="alert"></alert-message>
+    </div>
+    <!--    <div class="alert-res {{alertClr}}">{{deleteAlertRes}}</div>-->
+    <div ng-repeat="ques in allQuesArr | filter: searchQuery">
+        <div class="question-container" ng-click="gotoQuestion(ques.questionDesc)">
+            <div class="question-tag"><a href="">{{ques.questionTag}}</a></div>
+            <div>
+                {{ques.questionDesc}}
+            </div>
+        </div>
+        <button ng-if="userType=='admin'" class="btn btn-danger btn-sm pull-right remove-btn" ng-click="removeQuestion(ques)">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+    </div>
+</div>

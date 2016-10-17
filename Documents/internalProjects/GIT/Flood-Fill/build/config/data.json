@@ -1,0 +1,7 @@
+{
+    "Root User": "adminCbzgFxH",
+    "Root Password": "UjndgniZTBxQ",
+    "Database Name": "floodfill",
+    "Connection URL": "mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/",
+    "host": "10.3.2.30"
+}

@@ -1,0 +1,71 @@
+<div class="single-question-container">
+    <div class="ques-tag">{{quesArr.questionTag}} : {{quesArr.technology}}
+        <span class="posted-user">{{quesArr.userName}}</span>
+    </div>
+    <div class="quest-desc-container">
+        <span class="ques-desc">{{quesArr.questionDesc}}</span>
+    </div>
+    <div class="answer-container">
+        <div class="ans-desc" ng-repeat="ansObj in ansArr">
+            <span>{{ansObj.answerDesc}}</span>
+            <span class="posted-user">{{ansObj.userName}}</span>
+            <br/>
+            <div class="padding-0" ng-repeat="link in ansObj.answerLink track by $index">
+                <a href="{{link}}" target="_blank">{{link}}</a>
+            </div>
+            <br/>
+            <span class="glyphicon glyphicon-thumbs-up like" ng-click="incrementCount(ansObj, 'likeCount')"></span>
+            <span>{{ansObj.likeCount}} {{(ansObj.likeCount>1)?'likes':'like'}}</span>&nbsp;&nbsp;
+            <span class="glyphicon glyphicon-thumbs-down unlike" ng-click="incrementCount(ansObj, 'dislikeCount')"></span>
+            <span>{{ansObj.dislikeCount}} {{(ansObj.dislikeCount>1)?'unlikes':'unlike'}}</span>&nbsp;&nbsp;
+            <span ng-click="editAnswer(ansObj)" class="edit-button" data-toggle="modal" data-target="#postAns">
+                <span class="glyphicon glyphicon-pencil"></span>
+            <span> edit</span>
+            </span>
+            <span ng-if="ansObj.editUser" class="posted-user">Last edited by {{ansObj.editUser}}</span>
+        </div>
+    </div>
+    <ul class="button-list-ul">
+        <li class="button-list">
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#postAns" ng-click="clearData()">
+                Post Answer
+            </button>
+        </li>
+    </ul>
+</div>
+
+<div class="modal fade" id="postAns" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{{ansModalTitle}}</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table no-border">
+                    <tbody>
+                        <tr>
+                            <th>Answer Description: </th>
+                            <td>
+                                <textArea ng-model="answerDesc"></textArea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Reference Link: </th>
+                            <td>
+                                <textArea ng-model="answerLink"></textArea>
+                            </td>
+                        </tr>
+                        <tr>
+                    </tbody>
+                </table>
+                <div class="alert-res {{alertClr}}">{{alertRes}}</div>
+            </div>
+            <div class="modal-footer">
+                <button id="ansModalClose" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button ng-hide="!postAnsBtn" type="button" class="btn btn-primary" ng-click="postAnswer()">Post</button>
+                <button ng-hide="postAnsBtn" type="button" class="btn btn-primary" ng-click="postEditAnswer()">Edit</button>
+            </div>
+        </div>
+    </div>
+</div>
