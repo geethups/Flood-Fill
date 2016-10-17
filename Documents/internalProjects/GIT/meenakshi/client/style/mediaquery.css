@@ -1,0 +1,51 @@
+@media (min-width: 320px) {
+    .meenukkutty-photo-back,
+    body {
+        min-height: 180px;
+    }
+}
+
+@media (min-width: 360px) {
+    .meenukkutty-photo-back,
+    body {
+        min-height: 203px;
+    }
+}
+
+@media (max-width: 360px) {
+    #slider,
+    #slider .sliderInner {
+        width: 286px !important;
+        height: 200px;
+    }
+    #slider .navBulletsWrapper {
+        top: 212px;
+    }
+    #slider .navBulletsWrapper div {
+        margin: 0 3px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .menu-bar {
+        margin-top: 80px;
+        margin-right: 115px;
+    }
+    .meenukkutty-photo-back,
+    body {
+        min-height: 431px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-bar {
+        margin-top: 90px;
+        margin-right: 238px;
+    }
+    .meenukkutty-photo-back {
+        min-height: 619px;
+    }
+    body {
+        min-height: 657px;
+    }
+}

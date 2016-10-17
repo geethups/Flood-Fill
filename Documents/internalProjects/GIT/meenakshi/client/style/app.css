@@ -1,0 +1,208 @@
+#status {
+    display: inline-block;
+    margin-left: 26px;
+    line-height: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.code {
+    border: dashed 1px #BCBCCB;
+    padding: 8px 12px;
+    background-color: #F3F3F9;
+    white-space: pre;
+    font-family: "Courier New", Georgia;
+    font-size: 12px;
+    margin: 6px 0;
+    overflow: auto;
+}
+
+#header {
+    background: rgba(111, 3, 84, 0.96);
+    padding-top: 6px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999994;
+}
+
+#header a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+#header .small {
+    padding: 10px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.small {
+    font-size: 85%;
+}
+
+.main-container {}
+
+#sliderFrame {
+    border-radius: 20px;
+    padding-top: 36px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    width: 100% !important;
+}
+
+.meenukkutty-photo-back {
+    background: #ffffff url(../images/background-vava.jpg) no-repeat left top;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 723px;
+}
+
+
+/*
+.meenukkutty-photo-back2 {
+    background: #ffffff url(../images/background-vava2.jpg) no-repeat left top;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 723px;
+    margin-bottom: 20px;
+}
+*/
+
+.meenukkutty-head {
+    text-align: left;
+}
+
+.head-right {
+    float: right;
+}
+
+.menu-bar {
+    float: right;
+    padding: 20px;
+}
+
+.menu-bar li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.link-btn:hover {
+    background-color: #C1294D;
+}
+
+.link-btn {
+    display: inline-block;
+    background-color: #F46A8A;
+    color: #FFFFFF;
+    padding: 4px 45px;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.9;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+.video-section {
+    margin-top: 1px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.gallery-image {
+    width: 74%;
+    margin-top: 16px;
+}
+
+video {
+    width: 25%;
+}
+
+.nav-btn {
+    padding: 10px 10px;
+    background-size: 100% 100% !important;
+    cursor: pointer;
+}
+
+#prev-btn {
+    background: #fff url(../images/prev-btn.png) no-repeat;
+}
+
+#nxt-btn {
+    background: #fff url(../images/nxt-btn.png) no-repeat;
+}
+
+.nav-section {
+    position: fixed;
+    top: 46px;
+    left: 20px;
+}
+
+.hide-nav-btn {
+    cursor: default !important;
+    opacity: 0.5;
+}
+
+
+/*parallax style*/
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+    background-image: url("../images/img_parallax1.jpg");
+    min-height: 500px;
+    height: 100%;
+}
+
+.bgimg-2 {
+    background-image: url("../images/img_parallax2.jpg");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("../images/img_parallax3.jpg");
+    min-height: 400px;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+}

@@ -1,0 +1,41 @@
+<div class="row main-container">
+    <section class='col-xs-12 col-sm-6 col-md-6 nav-section'>
+        <button page-nav-btn id="prev-btn" class="nav-btn hide-nav-btn" ng-disabled="hideSliderGallery"></button>
+        <button page-nav-btn id="nxt-btn" class="nav-btn" ng-disabled="!hideSliderGallery"></button>
+    </section>
+    <section ng-hide="!hideSliderGallery" class='col-xs-12 col-sm-6 col-md-6 video-section'>
+        <img class="gallery-image" src="client/images/image-vava.jpg" />
+        <video width="" controls>
+            <source src="client/videos/vava-bday.mp4" type="video/mp4">
+            <source src="client/videos/vava-bday.ogg" type="video/ogg"> Your browser does not support HTML5 video.
+        </video>
+    </section>
+    <section ng-hide="hideSliderGallery" class="col-xs-12 col-sm-6 col-md-6">
+        <div id="sliderFrame">
+            <div id="slider">
+                <a href="#" target="_blank">
+                    <img src="client/images/image-slider-1.jpg" alt="Welcome to Meenukkutty.com" />
+                </a>
+                <img src="client/images/image-slider-2.jpg" />
+                <img src="client/images/image-slider-3.jpg" alt="" />
+                <img src="client/images/image-slider-4.jpg" alt="#htmlcaption" />
+                <img src="client/images/image-slider-5.jpg" />
+                <img src="client/images/image-slider-6.jpg" />
+                <img src="client/images/image-slider-7.jpg" />
+                <img src="client/images/image-slider-8.jpg" alt="" />
+                <img src="client/images/image-slider-9.jpg" alt="#htmlcaption" />
+                <img src="client/images/image-slider-10.jpg" />
+                <img src="client/images/image-slider-11.jpg" />
+                <img src="client/images/image-slider-12.jpg" />
+                <img src="client/images/image-slider-13.jpg" alt="" />
+                <img src="client/images/image-slider-14.jpg" alt="#htmlcaption" />
+                <img src="client/images/image-slider-15.jpg" />
+                <img src="client/images/image-slider-16.jpg" />
+                <img src="client/images/image-slider-17.jpg" />
+            </div>
+            <div id="htmlcaption" style="display: none;">
+                <em>HTML</em> caption. Link to <a href="http://www.google.com/">Google</a>.
+            </div>
+        </div>
+    </section>
+</div>
